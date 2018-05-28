@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport"
+        content="width=device-width initial-scale=1 user-scalable=no" />
+  <title>Spectacle Boilerplate</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+        rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+  <style>
+    footer {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 0 2rem 0.5rem 0;
+      text-align: right;
+      font-size: 24px;
+    }
+
+    footer a {
+      color: #03A9FC;
+    }
+
+    footer a i {
+      color: #1F2022;
+    }
+
+    @media only screen and (max-width: 600px) {
+      footer,
+      footer a {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <footer>
+    <a href="https://bit.ly/{{URL}}">
+      <i class="fas fa-chalkboard"></i>
+      <span>bit.ly/{{URL}}</span>
+    </a>
+  </footer>
+</body>
+</html>
