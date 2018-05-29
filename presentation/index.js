@@ -44,6 +44,7 @@ const theme = createTheme(
 
 const images = {
   speakerImage: require('../assets/me.jpg'),
+  famc: require('../assets/famc-logo.svg'),
 };
 
 const questionsSlide = [
@@ -74,21 +75,21 @@ export default class Presentation extends React.Component {
           <Layout>
             <Fill>
               <Image width="50%" src={images.speakerImage} />
+              <Image padding="1rem 0 0 0" width="50%" src={images.famc} />
+              <Text padding="1rem 0 0 0">Front End Software Engineer III</Text>
             </Fill>
             <Fill>
               <List>
-                <ListItem>
-                  Graduated from LSU in Computer Science with a concentration in Mathematics
-                </ListItem>
-                <ListItem>Background in C++, PHP, and JavaScript</ListItem>
+                <ListItem>B.S. in Computer Science</ListItem>
+                <ListItem>Concentration in Mathematics</ListItem>
+                <ListItem>LSU</ListItem>
+                <ListItem>PHP, Ruby, and JavaScript</ListItem>
               </List>
             </Fill>
           </Layout>
           <Notes>
             <Text>
-              Currently, I am a software developer at Franklin American Mortgage. I started building
-              PHP applications at 16 years old. I transitioned to writing JavaScript-heavy
-              applications in 2009 using "Web 2.0" technologies, such as, AJAX.
+              I am a Front End Software Engineer III on the Franklin American Innovation team.
             </Text>
           </Notes>
         </Slide>
