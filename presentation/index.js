@@ -23,6 +23,10 @@ const theme = createTheme(
   }
 );
 
+const images = {
+  speakerImage: require("../assets/me.jpg")
+};
+
 export default class Presentation extends React.Component {
   render() {
     return (
