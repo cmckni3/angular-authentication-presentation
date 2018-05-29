@@ -6,6 +6,8 @@ import {
   Appear,
   BlockQuote,
   Cite,
+  Code,
+  CodePane,
   Deck,
   Fill,
   Heading,
@@ -109,29 +111,41 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
         <Slide transition={['fade']}>
-          <Heading size={6} caps />
+          <Heading size={6} caps>
+            OAuth2
+          </Heading>
         </Slide>
         <Slide transition={['fade']}>
           <Heading size={6} caps>
             Angular Configuration
           </Heading>
           <Text>
-            Use <S type="italic">APP_INITIALIZER</S> and DI tokens
+            Use <S type="italic">APP_INITIALIZER</S> and DI tokens for runtime configuration
           </Text>
+          <CodePane
+            theme="light"
+            lang="javascript"
+            source={require('raw-loader!../assets/di.example')}
+          />
         </Slide>
         <Slide transition={['fade']}>
           <Heading size={6} caps>
             Firebase
           </Heading>
-          <Text>npm install firebase angularfire2</Text>
+          <Code>npm install --save firebase angularfire2</Code>
           <Notes>
             https://github.com/angular/angularfire2/blob/master/docs/auth/getting-started.md
           </Notes>
         </Slide>
         <Slide transition={['fade']}>
           <Heading size={6} caps>
-            Auth0
+            Firebase Configuration
           </Heading>
+          <CodePane
+            theme="light"
+            lang="json"
+            source={require('raw-loader!../assets/firebase-config.example')}
+          />
         </Slide>
         <Slide transition={['fade']}>
           <Heading size={6} caps>

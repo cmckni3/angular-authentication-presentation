@@ -1,0 +1,16 @@
+export function initConfig(configService: ConfigService) {
+  return () => configService.loadConfiguration().toPromise();
+}
+
+@NgModule({
+  providers: [
+    ConfigService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initConfig,
+      deps: [ConfigService],
+      multi: true,
+    },
+  ],
+})
+export class AppModule {}
