@@ -134,6 +134,7 @@ export default class Presentation extends React.Component {
             Firebase
           </Heading>
           <Code>npm install --save firebase angularfire2</Code>
+          <Code>npm install --save-dev @firebase/app-types</Code>
           <Notes>
             https://github.com/angular/angularfire2/blob/master/docs/auth/getting-started.md
           </Notes>
