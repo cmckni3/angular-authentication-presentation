@@ -2,7 +2,24 @@
 import React from 'react';
 
 // Import Spectacle Core tags
-import { BlockQuote, Cite, Deck, Heading, ListItem, List, Quote, Slide, Text } from 'spectacle';
+import {
+  Appear,
+  BlockQuote,
+  Cite,
+  Deck,
+  Fill,
+  Heading,
+  Image,
+  Layout,
+  ListItem,
+  List,
+  Notes,
+  Quote,
+  S,
+  Slide,
+  SlideSet,
+  Text,
+} from 'spectacle';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -24,7 +41,7 @@ const theme = createTheme(
 );
 
 const images = {
-  speakerImage: require("../assets/me.jpg")
+  speakerImage: require('../assets/me.jpg'),
 };
 
 const questionsSlide = [
@@ -32,61 +49,96 @@ const questionsSlide = [
     <Heading size={1} lineHeight={1} caps>
       Questions?
     </Heading>
-  </Slide>
+  </Slide>,
 ];
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={['zoom', 'slide']} transitionDuration={500} theme={theme}>
-        <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+        <Slide transition={['zoom']}>
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+            Angular Authentication
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text textFont="monospace" margin="auto auto 5em auto">
+            May 29, 2018
+          </Text>
+          <Text textFont="monospace">By Chris McKnight</Text>
+        </Slide>
+        <Slide transition={['fade']}>
+          <Heading size={6} caps>
+            About Me
+          </Heading>
+          <Layout>
+            <Fill>
+              <Image width="50%" src={images.speakerImage} />
+            </Fill>
+            <Fill>
+              <List>
+                <ListItem>
+                  Graduated from LSU in Computer Science with a concentration in Mathematics
+                </ListItem>
+                <ListItem>Background in C++, PHP, and JavaScript</ListItem>
+              </List>
+            </Fill>
+          </Layout>
+          <Notes>
+            <Text>
+              Currently, I am a software developer at Franklin American Mortgage. I started building
+              PHP applications at 16 years old. I transitioned to writing JavaScript-heavy
+              applications in 2009 using "Web 2.0" technologies, such as, AJAX.
+            </Text>
+          </Notes>
+        </Slide>
+        <Slide transition={['fade']}>
+          <Heading size={6} caps>
+            Why Authentication?
+          </Heading>
+          <div>
+            <List>
+              <Appear>
+                <ListItem>User Identification (Authentication)</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>Restrict Access to Resources (Authorization)</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>Auditing</ListItem>
+              </Appear>
+            </List>
+          </div>
+        </Slide>
+        <Slide transition={['fade']}>
+          <Heading size={6} caps />
+        </Slide>
+        <Slide transition={['fade']}>
+          <Heading size={6} caps>
+            Angular Configuration
+          </Heading>
+          <Text>
+            Use <S type="italic">APP_INITIALIZER</S> and DI tokens
           </Text>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
+        <Slide transition={['fade']}>
+          <Heading size={6} caps>
+            Firebase
           </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
+          <Text>npm install firebase angularfire2</Text>
+          <Notes>
+            https://github.com/angular/angularfire2/blob/master/docs/auth/getting-started.md
+          </Notes>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
+        <Slide transition={['fade']}>
+          <Heading size={6} caps>
+            Auth0
           </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={['fade']}>
+          <Heading size={6} caps>
+            Demo
+          </Heading>
         </Slide>
+        <div hasSlideChildren>{questionsSlide}</div>
       </Deck>
     );
   }
