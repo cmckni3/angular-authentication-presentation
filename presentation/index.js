@@ -27,6 +27,14 @@ const images = {
   speakerImage: require("../assets/me.jpg")
 };
 
+const questionsSlide = [
+  <Slide transition={['fade']}>
+    <Heading size={1} lineHeight={1} caps>
+      Questions?
+    </Heading>
+  </Slide>
+];
+
 export default class Presentation extends React.Component {
   render() {
     return (
